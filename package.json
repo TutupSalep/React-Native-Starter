@@ -1,0 +1,38 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "@expo/vector-icons": "^8.0.0",
+    "axios": "^0.18.0",
+    "expo": "^25.0.0",
+    "expo-asset": "^1.1.0",
+    "expo-constants": "^1.0.2",
+    "expo-file-system": "^1.0.2",
+    "expo-font": "^1.0.0",
+    "expo-react-native-adapter": "^1.1.1",
+    "firebase": "^4.10.1",
+    "native-base": "^2.8.1",
+    "react": "16.2.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-navigation": "^1.0.0-beta.27",
+    "react-redux": "^5.0.7",
+    "react-transform-hmr": "^1.0.4",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.10.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "jest-expo": "^25.0.0"
+  }
+}

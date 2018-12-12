@@ -1,0 +1,67 @@
+Arguments: 
+  /usr/local/Cellar/node/10.10.0/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Volumes/Data/Project/Hope/react-starter/package.json: Unexpected string in JSON at position 813
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:92:30)
+      at /usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:103:13
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "private": true,
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "eject": "expo eject",
+      "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/samples": "2.1.1",
+      "@expo/vector-icons": "^8.0.0",
+      "axios": "^0.18.0",
+      "expo": "^30.0.1",
+      "expo-asset": "^1.1.0",
+      "expo-constants": "^1.0.2",
+      "expo-file-system": "^1.0.2",
+      "expo-font": "^1.0.0",
+      "expo-react-native-adapter": "^1.1.1",
+      "firebase": "^4.10.1",
+      "native-base": "^2.8.1",
+      "react": "16.3.1",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+      "react-navigation": "^2.16.0"
+      "react-redux": "^5.0.6",
+      "redux": "^3.7.2",
+      "redux-persist": "^4.10.2",
+      "redux-thunk": "^2.2.0"
+    },
+    "devDependencies": {
+      "jest-expo": "30.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
