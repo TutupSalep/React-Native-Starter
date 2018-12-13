@@ -1,5 +1,6 @@
-import { createStore, applyMiddleware } from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import { autoRehydrate } from 'redux-persist'
 import API from "../api/API";
 
 //
@@ -27,8 +28,10 @@ const reducer = (state = initialState, action) => {
 // Store...
 //
 
-const store = createStore(reducer, applyMiddleware(thunkMiddleware));
-export { store };
+export let store = compose(
+    applyMiddleware(thunkMiddleware),
+    autoRehydrate()
+)(createStore)(reducer);
 
 //
 // Action Creators...

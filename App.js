@@ -9,7 +9,9 @@ import * as firebase from 'firebase';
 import { Provider } from 'react-redux';
 import Home from "./screens/Home";
 import { store } from './reducers/app-redux';
+import { persistStore } from "redux-persist";
 
+persistStore(store, {storage: AsyncStorage});
 
 const AppNavigator = StackNavigator({
     Home: {

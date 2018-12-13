@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "expo-firebase-redux-starter",
-    "description": "A very interesting project.",
-    "slug": "expo-firebase-redux-starter",
+    "name": "raka-settya-starter",
+    "description": "React-Native Starter with Expo, Redux, Firebase and NativeBase",
+    "slug": "raka-settya-starter",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
