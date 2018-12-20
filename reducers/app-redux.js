@@ -17,8 +17,8 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case "News_Response":
-            return {...state, dataNews: action};
+        // case "News_Response":
+        //     return {...state, dataNews: action};
         default:
             return state;
     }
@@ -37,23 +37,23 @@ export let store = compose(
 // Action Creators...
 //
 
-const getNewsHome = () => {
-    return function (dispatch) {
-        API.getNews()
-            .then((response) => {
-                console.log(response);
-                return dispatch({type: 'News_Response',response})
-            })
-            .catch((error) => {
-                if(error){
-                    return dispatch({type: 'News_Error', error})
-                }else if(error){
-                    // AsyncStorage.setItem('error', error.response.data.message);
-                    // response =  error.response;
-                    return dispatch ({type: 'News_Failed', error})
-                }
-            });
-    }
-}
+// const getNewsHome = () => {
+//     return function (dispatch) {
+//         API.getNews()
+//             .then((response) => {
+//                 console.log(response);
+//                 return dispatch({type: 'News_Response',response})
+//             })
+//             .catch((error) => {
+//                 if(error){
+//                     return dispatch({type: 'News_Error', error})
+//                 }else if(error){
+//                     // AsyncStorage.setItem('error', error.response.data.message);
+//                     // response =  error.response;
+//                     return dispatch ({type: 'News_Failed', error})
+//                 }
+//             });
+//     }
+// }
 
-export { getNewsHome };
+export {};

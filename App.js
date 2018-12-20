@@ -1,33 +1,16 @@
 import React from 'react';
-import { Platform, StatusBar, View, StyleSheet } from 'react-native';
+import { Platform, View, StyleSheet, AsyncStorage } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
-import { StackNavigator } from 'react-navigation';
 import ApiKeys from './constants/ApiKeys';
 import { navigateOnce } from './navigator/Navigator';
 import * as firebase from 'firebase';
 import { Provider } from 'react-redux';
-import Home from "./screens/Home";
 import { store } from './reducers/app-redux';
 import { persistStore } from "redux-persist";
+import MainApp from "./navigator/MainApp";
 
 persistStore(store, {storage: AsyncStorage});
-
-const AppNavigator = StackNavigator({
-    Home: {
-        screen: Home
-    },
-},
-{
-    navigationOptions: {
-    },
-    cardStyle: {
-        backgroundColor: '#F2F2F2'
-    },
-    initialRouteName: 'Home'
-});
-
-AppNavigator.router.getStateForAction = navigateOnce(AppNavigator.router.getStateForAction);
 
 export default class App extends React.Component {
   
@@ -62,12 +45,8 @@ export default class App extends React.Component {
       );
     } else {
       return (
-          <Provider store={store}>
-              <View style={styles.container}>
-                  {Platform.OS === 'ios' && <View style={styles.statusBarBackground} />}
-                  {Platform.OS === 'android' && <View style={styles.statusBarUnderlay} />}
-                  {(this.state.isAuthenticated) ? <Home /> : <Home />}
-              </View>
+          <Provider store={ store }>
+              <MainApp />
           </Provider>
       );
     }
