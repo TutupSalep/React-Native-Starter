@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "SoundFren Mobile",
-    "description": "SoundFren Mobile Apps",
-    "slug": "sound-fren-mobile",
+    "name": "raka-settya-starter",
+    "description": "React-Native Starter with Expo, Redux, Firebase and NativeBase",
+    "slug": "raka-settya-starter",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
